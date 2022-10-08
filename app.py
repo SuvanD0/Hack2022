@@ -7,13 +7,19 @@ df = pd.read_csv('/Users/frankli/Desktop/OSU Hack Ohio Fall 2022 Data_Final.csv'
 # sampleDF
 sampleDF = df.head(20)
 st.write(df.columns)
-fig = px.scatter(df, x ="Date & Time", y = "WTG-A (2.82-FDR 2A) - POWER", opaque = .1)
+fig = px.scatter(df, x ="Date & Time", y = "WTG-A (2.82-FDR 2A) - POWER", opacity = .1)
 st.write(fig)
 
 dfB = pd.read_csv('WTG B.csv')
 sampleDFB = dfB.head(20)
 st.write(dfB.columns)
-fig1 = px.scatter(dfB, x ="Date & Time", y = "WTG-A (2.82-FDR 2A) - POWER", opaque = .1)
+fig1 = px.scatter(dfB, x ="Date & Time", y = "WTG-B (2.82-FDR 2A) - POWER", opacity = .1)
+st.write(fig1)
+
+dfB = pd.read_csv('WTG C.csv')
+sampleDFB = dfB.head(20)
+st.write(dfB.columns)
+fig1 = px.scatter(dfB, x ="Date & Time", y = "WTG-B (2.82-FDR 2A) - POWER", opacity = .1)
 st.write(fig1)
 
 
