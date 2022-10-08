@@ -10,6 +10,12 @@ st.write(df.columns)
 fig = px.scatter(df, x ="Date & Time", y = "WTG-A (2.82-FDR 2A) - POWER", opague = .1)
 st.write(fig)
 
+dfB = pd.read_csv('WTG B.csv')
+sampleDFB = dfB.head(20)
+st.write(dfB.columns)
+fig1 = px.scatter(dfB, x ="Date & Time", y = "WTG-A (2.82-FDR 2A) - POWER", opague = .1)
+st.write(fig1)
+
 
 # import streamlit as st
 # import pandas as pd
