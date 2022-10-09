@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-df = pd.read_csv('/Users/frankli/Desktop/OSU Hack Ohio Fall 2022 Data_Final.csv')
+df = pd.read_csv('WTG A.csv')
 # sampleDF = df.sample(frac=1/20)
 # sampleDF
 sampleDF = df.head(20)
