@@ -1,0 +1,41 @@
+df = pd.read_csv('WTG A.csv')
+# sampleDF = df.sample(frac=1/20)
+# sampleDF
+sampleDF = df.head(20)
+st.write(df.columns)
+fig = px.scatter(df, x ="Date & Time", y = "WTG-A (2.82-FDR 2A) - DRIVE TRAIN ACCELERATION", opacity = .1, title = "Blade 1 Value")
+st.write(fig)
+
+df['WTG-A (2.82-FDR 2A) - STATE AND FAULT'].isna().sum()
+
+
+
+selected = option_menu(
+                menu_title=None,  # required
+                options=["Home", "Turbines", "Model"],  # required
+                icons=["house", "wind", "pc"],  # optional
+                menu_icon="cast",  # optional
+                default_index=0,  # optional
+                orientation="horizontal",
+            )         
+
+if selected == "Home":
+    st.title(f"You have selected {selected}")
+if selected == "Turbines":
+    st.title(f"You have selected {selected}")
+if selected == "Model":
+    st.title(f"You have selected {selected}")
+
+
+headerBlock = st.container()
+turbines = st.container()
+modelTraining = st.container()
+
+with headerBlock:
+    st.markdown("# AEP Renewables Challenge")
+    st.markdown("### Welcome to the future of Energy.")
+    st.markdown("### By AEP.")
+    st.markdown("**Created by Suvan, Kathir, Aaron, Frank**")
+
+with turbines:
+    st.header('Which Turbines Had Issue')
